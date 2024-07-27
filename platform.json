@@ -87,9 +87,7 @@
     "framework-espidf": {
       "type": "framework",
       "optional": true,
-      "owner": "platformio",
-      "version": "~3.50202.0",
-      "optionalVersions": ["~3.40407.0"]
+      "version": "https://github.com/XiRoad/esp-idf.git#release/v4.4"
     },
     "tool-esptoolpy": {
       "type": "uploader",
