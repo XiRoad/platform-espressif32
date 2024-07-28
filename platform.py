@@ -112,10 +112,11 @@ class Espressif32Platform(PlatformBase):
                     self.packages[p]["optional"] = False
 
             if "arduino" in frameworks:
+                pass
                 # Downgrade the IDF version for mixed Arduino+IDF projects
-                self.packages["framework-espidf"]["version"] = "~3.40407.0"
+                # self.packages["framework-espidf"]["version"] = "~3.40407.0"
                 # Delete the latest toolchain packages from config
-                self.packages.pop("toolchain-xtensa-esp-elf", None)
+                # self.packages.pop("toolchain-xtensa-esp-elf", None)
             else:
                 # Disable old toolchain packages and use the latest
                 # available for IDF v5.0
