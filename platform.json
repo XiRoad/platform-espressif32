@@ -88,8 +88,8 @@
     "framework-espidf": {
       "type": "framework",
       "optional": true,
-      "owner": "espressif",
-      "version": "https://github.com/espressif/esp-idf/releases/download/v5.1.2/esp-idf-v5.1.2.zip"
+      "owner": "platformio",
+      "version": "~3.50102.240122"
     },
     "tool-esptoolpy": {
       "type": "uploader",
