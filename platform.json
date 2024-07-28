@@ -82,14 +82,13 @@
       "type": "framework",
       "optional": true,
       "owner": "platformio",
-      "version": "~3.20017.0",
-      "optionalVersions": ["~3.40407.0"]
+      "version": "https://github.com/espressif/arduino-esp32.git#3.0.3"
     },
     "framework-espidf": {
       "type": "framework",
       "optional": true,
       "owner": "platformio",
-      "version": "~3.50102.240122"
+      "version": "https://github.com/espressif/esp-idf.git#v5.1.4"
     },
     "tool-esptoolpy": {
       "type": "uploader",
