@@ -33,26 +33,25 @@
     "toolchain-xtensa-esp32": {
       "type": "toolchain",
       "owner": "espressif",
-      "version": "8.4.0+2021r2-patch5"
+      "version": "12.2.0+20230208"
     },
     "toolchain-xtensa-esp32s2": {
       "type": "toolchain",
       "optional": true,
       "owner": "espressif",
-      "version": "8.4.0+2021r2-patch5"
+      "version": "12.2.0+20230208"
     },
      "toolchain-xtensa-esp32s3": {
       "type": "toolchain",
       "optional": true,
       "owner": "espressif",
-      "version": "8.4.0+2021r2-patch5"
+       "version": "12.2.0+20230208"
     },
     "toolchain-riscv32-esp": {
       "type": "toolchain",
       "optional": true,
       "owner": "espressif",
-      "version": "8.4.0+2021r2-patch5",
-      "optionalVersions": ["13.2.0+20230928"]
+      "version": "12.2.0+20230208"
     },
     "toolchain-xtensa-esp-elf": {
       "type": "toolchain",
@@ -129,7 +128,7 @@
     "tool-cmake": {
       "optional": true,
       "owner": "platformio",
-      "version": "~3.16.0"
+      "version": "~3.21.0"
     },
     "tool-ninja": {
       "optional": true,
