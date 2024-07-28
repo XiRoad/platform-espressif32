@@ -81,14 +81,14 @@
     "framework-arduinoespressif32": {
       "type": "framework",
       "optional": true,
-      "owner": "tasmota",
-      "version": "https://github.com/Jason2866/esp32-arduino-lib-builder/releases/download/2694/framework-arduinoespressif32-all-release_v5.1-66863bf.zip"
+      "owner": "platformio",
+      "version": "~3.20017.0"
     },
     "framework-espidf": {
       "type": "framework",
       "optional": true,
-      "owner": "tasmota",
-      "version": "https://github.com/tasmota/esp-idf/releases/download/v5.1.4.240712/esp-idf-v5.1.4.zip"
+      "owner": "platformio",
+      "version": "~3.50202.0"
     },
     "tool-esptoolpy": {
       "type": "uploader",
