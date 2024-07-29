@@ -93,7 +93,7 @@ class Espressif32Platform(PlatformBase):
                         sys.exit(1)
 
         if "espidf" in frameworks:
-            if frameworks == ["espidf"]:
+            if True: # frameworks == ["espidf"]:
                 # Starting from v12, Espressif's toolchains are shipped without
                 # bundled GDB. Instead, it's distributed as separate packages for Xtensa
                 # and RISC-V targets. Currently only IDF depends on the latest toolchain
@@ -111,12 +111,11 @@ class Espressif32Platform(PlatformBase):
                 elif p in ("tool-mconf", "tool-idf") and IS_WINDOWS:
                     self.packages[p]["optional"] = False
 
-            if "arduino" in frameworks:
-                pass
+            if False:  # "arduino" in frameworks:
                 # Downgrade the IDF version for mixed Arduino+IDF projects
-                # self.packages["framework-espidf"]["version"] = "~3.40407.0"
+                self.packages["framework-espidf"]["version"] = "~3.40407.0"
                 # Delete the latest toolchain packages from config
-                # self.packages.pop("toolchain-xtensa-esp-elf", None)
+                self.packages.pop("toolchain-xtensa-esp-elf", None)
             else:
                 # Disable old toolchain packages and use the latest
                 # available for IDF v5.0
@@ -140,7 +139,7 @@ class Espressif32Platform(PlatformBase):
                     "version"
                 ] = "13.2.0+20230928"
 
-        if "arduino" in frameworks:
+        if False: # "arduino" in frameworks:
             # Disable standalone GDB packages for Arduino and Arduino/IDF projects
             for gdb_package in ("tool-xtensa-esp-elf-gdb", "tool-riscv32-esp-elf-gdb"):
                 self.packages.pop(gdb_package, None)
