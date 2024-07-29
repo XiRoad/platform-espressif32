@@ -50,9 +50,8 @@
     "toolchain-riscv32-esp": {
       "type": "toolchain",
       "optional": true,
-      "owner": "espressif",
-      "version": "8.4.0+2021r2-patch5",
-      "optionalVersions": ["13.2.0+20230928"]
+      "owner": "platformio",
+      "version": "13.2.0+20230928"
     },
     "toolchain-xtensa-esp-elf": {
       "type": "toolchain",
