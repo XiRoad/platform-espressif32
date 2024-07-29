@@ -124,7 +124,8 @@ class Espressif32Platform(PlatformBase):
                     "xtensa-esp32s2",
                     "xtensa-esp32s3",
                 ):
-                    self.packages.pop("toolchain-%s" % target, None)
+                    pass # not delete just don't use
+                    # self.packages.pop("toolchain-%s" % target, None)
 
                 if mcu in ("esp32c3", "esp32c6"):
                     self.packages.pop("toolchain-xtensa-esp-elf", None)
