@@ -110,14 +110,14 @@ env.Append(
                 " ".join(
                     [
                         "riscv32-esp-elf-objcopy"
-                        if mcu in ("esp32c3", "esp32c6")
+                        if mcu in ("esp32c2","esp32c3","esp32c6","esp32h2","esp32p4")
                         else "xtensa-%s-elf-objcopy" % mcu,
                         "--input-target",
                         "binary",
                         "--output-target",
-                        "elf32-littleriscv" if mcu in ("esp32c3","esp32c6") else "elf32-xtensa-le",
+                        "elf32-littleriscv" if mcu in ("esp32c2","esp32c3","esp32c6","esp32h2","esp32p4") else "elf32-xtensa-le",
                         "--binary-architecture",
-                        "riscv" if mcu in ("esp32c3","esp32c6") else "xtensa",
+                        "riscv" if mcu in ("esp32c2","esp32c3","esp32c6","esp32h2","esp32p4") else "xtensa",
                         "--rename-section",
                         ".data=.rodata.embedded",
                         "$SOURCE",
@@ -136,7 +136,7 @@ env.Append(
                             env.PioPlatform().get_package_dir("tool-cmake") or "",
                             "bin",
                             "cmake",
-                        ),
+                            ),
                         "-DDATA_FILE=$SOURCE",
                         "-DSOURCE_FILE=$TARGET",
                         "-DFILE_TYPE=$FILE_TYPE",
@@ -147,7 +147,7 @@ env.Append(
                             "cmake",
                             "scripts",
                             "data_file_embed_asm.cmake",
-                        ),
+                            ),
                     ]
                 ),
                 "Generating assembly for $TARGET",
@@ -162,8 +162,8 @@ env.Append(
 flags = env.get("CPPDEFINES")
 for files_type in ("embed_txtfiles", "embed_files"):
     if (
-        "COMPONENT_" + files_type.upper() not in env.Flatten(flags)
-        and "build." + files_type not in board
+            "COMPONENT_" + files_type.upper() not in env.Flatten(flags)
+            and "build." + files_type not in board
     ):
         continue
 

@@ -5,7 +5,7 @@ Import("env")
 
 def pioSizeIsRamSectionCustom(env, section):
     if section and re.search(
-        r"\.dram0\.data|\.dram0\.bss|\.noinit", section.get("name", "")
+            r"\.dram0\.data|\.dram0\.bss|\.noinit", section.get("name", "")
     ):
         return True
 
@@ -14,8 +14,8 @@ def pioSizeIsRamSectionCustom(env, section):
 
 def pioSizeIsFlashectionCustom(env, section):
     if section and re.search(
-        r"\.iram0\.text|\.iram0\.vectors|\.dram0\.data|\.flash\.text|\.flash\.rodata|\.flash\.appdesc",
-        section.get("name", ""),
+            r"\.iram0\.text|\.iram0\.vectors|\.dram0\.data|\.flash\.text|\.flash\.rodata|\.flash\.appdesc",
+            section.get("name", ""),
     ):
         return True
 
