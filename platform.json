@@ -30,23 +30,6 @@
     }
   },
   "packages": {
-    "toolchain-xtensa-esp32": {
-      "type": "toolchain",
-      "owner": "espressif",
-      "version": "13.2.0+20230928"
-    },
-    "toolchain-xtensa-esp32s2": {
-      "type": "toolchain",
-      "optional": true,
-      "owner": "espressif",
-      "version": "13.2.0+20230928"
-    },
-    "toolchain-xtensa-esp32s3": {
-      "type": "toolchain",
-      "optional": true,
-      "owner": "espressif",
-      "version": "13.2.0+20230928"
-    },
     "toolchain-riscv32-esp": {
       "type": "toolchain",
       "optional": true,
